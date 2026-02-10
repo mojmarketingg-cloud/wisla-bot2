@@ -2,12 +2,12 @@
 builder = "NIXPACKS"
 
 [phases.setup]
-nixPkgs = ["python311", "playwright"]
+nixPkgs = ["python311"]
 
 [phases.install]
 cmds = [
   "pip install -r requirements.txt",
-  "playwright install chromium"
+  "playwright install --with-deps chromium"
 ]
 
 [start]
